@@ -97,7 +97,7 @@ def validate2(position1, position2, letter, password):
 
 def main():
     """ Entry """
-    with open('input02.txt') as stream:
+    with open('day02.txt') as stream:
         parsed = [parse(line) for line in stream]
 
     # Part 1

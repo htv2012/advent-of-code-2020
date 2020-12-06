@@ -116,7 +116,7 @@ def count_trees(grid, right, down):
 
 def main():
     # Read the map into a grid
-    grid = [line.strip() for line in open('input03.txt')]
+    grid = [line.strip() for line in open('day03.txt')]
 
     # Part 1
     print(f"Part 1: {count_trees(grid, 3, 1)}")

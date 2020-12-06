@@ -30,7 +30,7 @@ import operator
 
 def main():
     """ Entry """
-    with open('input01.txt') as stream:
+    with open('day01.txt') as stream:
         numbers = [int(x.strip()) for x in stream]
 
     # Part 1
