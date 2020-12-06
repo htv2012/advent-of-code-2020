@@ -23,6 +23,9 @@ correct answer is 514579.
 Of course, your expense report is much larger. Find the two entries
 that sum to 2020; what do you get if you multiply them together?
 """
+import itertools
+import functools
+import operator
 
 
 def main():
@@ -30,10 +33,18 @@ def main():
     with open('input01.txt') as stream:
         numbers = [int(x.strip()) for x in stream]
 
+    # Part 1
     for number in numbers:
         other = 2020 - number
         if other in numbers:
             print(f"{number} x {other} = {number * other}")
+            break
+
+    # Part 2
+    for triplet in itertools.combinations(numbers, 3):
+        if sum(triplet) == 2020:
+            print(' x '.join(str(x) for x in triplet), end=" = ")
+            print(functools.reduce(operator.mul, triplet))
             break
 
 
