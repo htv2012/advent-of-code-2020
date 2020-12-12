@@ -1,4 +1,4 @@
-from day07 import parse, can_hold
+from day07 import parse
 
 
 def test_parse():
@@ -32,12 +32,3 @@ def test_parse():
         "plaid fuchsia",
         []
     )
-
-
-def test_can_hold():
-    container = {"dim chartreuse": 2, "shiny gold": 3}
-    assert can_hold(container, "shiny gold", 1) == 1
-    assert can_hold(container, "shiny gold", 2) == 1
-    assert can_hold(container, "shiny gold", 3) == 1
-    assert can_hold(container, "shiny gold", 4) == 0
-    assert can_hold(container, "orange", 1) == 0
